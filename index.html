@@ -63,10 +63,46 @@
         <button id="next">Next Step</button>
       </form>
     </div>
+
     <!-- Select Plan -->
      <div class="select-plan" id="select-plan">
-      <h1 style="color: hsl(213, 96%, 18%);">Personal Info</h1>
-      <p style="color: hsl(231, 11%, 63%)">Please provide your name, email address and phone number.</p>
+      <h1 style="color: hsl(213, 96%, 18%);">Select Your Plan</h1>
+      <p style="color: hsl(231, 11%, 63%)">You have the option of monthly and yearly billings.</p>
+      <div class="cards">
+        <div class="card active">
+          <img src="assets/images/icon-arcade.svg" alt="">
+          <span>
+            <h4>Arcade</h4>
+            <p>$9/mo</p>
+          </span>
+        </div>
+        <div class="card">
+          <img src="assets/images/icon-advanced.svg" alt="">
+          <span>
+            <h4>Advanced</h4>
+            <p>$12/mo</p>
+          </span>
+        </div>
+        <div class="card">
+          <img src="assets/images/icon-pro.svg" alt="">
+          <span>
+            <h4>Pro</h4>
+            <p>$15/mo</p>
+          </span>
+        </div>
+      </div>
+      <div class="toggle">
+        <label class="switch"> 
+          <p style="margin-left: -65px; color: hsl(213, 96%, 18%);">Monthly</p>
+          <input type="checkbox"> 
+          <span class="slider round"></span>
+          <p style="margin-left: 50px; color: hsl(231, 11%, 63%);">Yearly</p>
+        </label>
+      </div>
+      <div class="controls">
+        <button id="plan-back">Go Back</button>
+        <button id="plan-next">Next Step</button>
+      </div>
      </div>
   </div>
   

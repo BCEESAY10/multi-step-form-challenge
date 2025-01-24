@@ -44,6 +44,7 @@ h4{
     padding: 0 1.5rem;
     display: flex;
 }
+/* Sidebar styles */
 .container .sidebar{
     width: 270px;
     margin: 20px;
@@ -80,6 +81,7 @@ h4{
     color: hsl(231, 11%, 63%);
 }
 
+/* Presonal info styles */
 .container .personal-info{
     margin: 20px;
     padding: 20px 16px;
@@ -131,6 +133,132 @@ h4{
     background-color: hsl(213, 96%, 18%);
 }
 
+/* Select Plan styles */
+.container .select-plan{
+    margin: 20px;
+    padding: 20px 16px;
+}
+.container .select-plan .cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 50px;
+    gap: 20px;
+}
+.container .select-plan .cards .card{
+    width: 140px;
+    height: 170px;
+    padding: 20px;
+    border-radius: 6px;
+    border: 1px solid hsla(231, 11%, 63%, 0.37);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.container .select-plan .cards .card img{
+    width: 40px;
+    height: 40px;
+}
+
+.container .select-plan .cards .card:hover{
+    border: 1px solid hsl(243, 100%, 62%);
+}
+.container .select-plan .cards .card.active{
+    border: 1px solid hsl(243, 100%, 62%);
+    background-color:   hsla(228, 100%, 88%, 0.459);
+}
+.container .select-plan .cards .card span h4{
+    color: hsl(213, 96%, 18%);
+}
+.container .select-plan .cards .card span p{
+    color: hsl(0, 0%, 33%);
+}
+.container .select-plan .toggle{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+    margin-top: 30px;
+    border-radius: 6px;
+    background-color: hsla(249, 4%, 34%, 0.226);
+}
+.container .select-plan .toggle .switch{
+    position: relative;
+    display: flex;
+    width: 50px;
+    height: 24px;
+    gap: 10px;
+}
+.container .select-plan .toggle .switch input{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.container .select-plan .toggle .switch input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+  
+.container .select-plan .toggle .switch .slider{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 34px;
+    background-color: hsl(213, 96%, 18%);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+.container .select-plan .toggle .switch .slider::before{
+    position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  border-radius: 50%;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+.container .select-plan .controls{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+.container .select-plan .controls #plan-next{
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: hsl(243, 100%, 62%);
+    color: white;
+    font-size: 18px;
+    width: 120px;
+    cursor: pointer;
+    margin-top: 30px;
+}
+.container .select-plan .controls #plan-next:hover{
+    background-color: hsl(213, 96%, 18%);
+}
+.container .select-plan .controls #plan-back{
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: transparent;
+    color: black;
+    font-size: 18px;
+    width: 120px;
+    cursor: pointer;
+    margin-top: 30px;
+}
+.container .select-plan .controls #plan-back:hover{
+    color: hsl(213, 96%, 18%);
+}
+
+/* Footer styles */
 .attribution{
     display: fixed;
     bottom: 0;
