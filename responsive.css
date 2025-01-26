@@ -246,18 +246,24 @@
     .container .select-plan .controls #plan-back:hover{
         color: hsl(213, 96%, 18%);
     }
-    
+
+    /* -------------------- */
     /* Add-on styles */
+    /* -------------------- */
+
     .container .add-on{
-        margin: 20px;
-        padding: 20px 16px;
+        margin: 0;
+        margin-top: 6em;
+        z-index: 10;
+        background-color: white;
+        border-radius: 6px;
     }
     .container .add-on .rects{
         display: grid;
         grid-template-rows: repeat(1fr, 3);
-        margin-top: 50px;
-        gap: 20px;
-        width: 500px;
+        margin-top: 30px;
+        gap: 10px;
+        width: 100%;
     }
     
     .container .add-on .rects .rect{
@@ -279,9 +285,10 @@
     
     .container .add-on .rects .rect p{
         color: hsla(243, 9%, 54%, 0.425);
+        font-size: 14px;
     }
     .container .add-on .rects .rect span{
-        margin: 0 20px;
+        margin: 0 10px;
     }
     .container .add-on .rects .rect h4{
         color: hsl(213, 96%, 18%);
@@ -327,7 +334,7 @@
         padding: 12px;
         border: none;
         border-radius: 6px;
-        background-color: hsl(243, 100%, 62%);
+        background-color: hsl(213, 96%, 18%);
         color: white;
         font-size: 18px;
         width: 120px;
@@ -335,7 +342,7 @@
         margin-top: 30px;
     }
     .container .add-on .controls #add-next:hover{
-        background-color: hsl(213, 96%, 18%);
+        background-color: hsl(243, 100%, 62%);
     }
     .container .add-on .controls #add-back{
         padding: 12px;

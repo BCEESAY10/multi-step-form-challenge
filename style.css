@@ -168,6 +168,7 @@ h4{
 .container .select-plan .cards .card span .bonus{
     color: hsl(213, 96%, 18%);
     font-size: 14px;
+
 }
 .container .select-plan .toggle{
     width: 100%;
@@ -333,7 +334,7 @@ h4{
     padding: 12px;
     border: none;
     border-radius: 6px;
-    background-color: hsl(243, 100%, 62%);
+    background-color: hsl(213, 96%, 18%);
     color: white;
     font-size: 18px;
     width: 120px;
@@ -341,7 +342,7 @@ h4{
     margin-top: 30px;
 }
 .container .add-on .controls #add-next:hover{
-    background-color: hsl(213, 96%, 18%);
+    background-color: hsl(243, 100%, 62%);
 }
 .container .add-on .controls #add-back{
     padding: 12px;
@@ -462,5 +463,4 @@ h4{
     display: fixed;
     bottom: 0;
     margin: 50px;
-    display: none;
 }
