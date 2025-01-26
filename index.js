@@ -29,15 +29,17 @@ function validateForm() {
             isValid = false; 
             if (input.type === 'text') {
                 nameError.style.display = 'block';
-                break;
+               
             } else if (input.type === 'email') {
                 emailError.style.display = 'block';
-                break;
+                
             } else if(input.type === 'tel') {
                 phoneError.style.display = 'block';
                 break;
             }
-        } else {
+        } 
+        
+        else {
             // Hide error messages for valid inputs
             if (input.type === 'text') {
                 nameError.style.display = 'none';
