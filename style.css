@@ -112,7 +112,7 @@ h4{
     padding: 12px;
     border: none;
     border-radius: 6px;
-    background-color: hsl(243, 100%, 62%);
+    background-color: hsl(213, 96%, 18%);
     color: white;
     font-size: 18px;
     width: 120px;
@@ -121,7 +121,7 @@ h4{
     margin-top: 30px;
 }
 .container .personal-info button:hover{
-    background-color: hsl(213, 96%, 18%);
+    background-color: hsl(243, 100%, 62%);
 }
 
 /* Select Plan styles */
@@ -224,7 +224,7 @@ h4{
     padding: 12px;
     border: none;
     border-radius: 6px;
-    background-color: hsl(243, 100%, 62%);
+    background-color: hsl(213, 96%, 18%);
     color: white;
     font-size: 18px;
     width: 120px;
@@ -232,7 +232,7 @@ h4{
     margin-top: 30px;
 }
 .container .select-plan .controls #plan-next:hover{
-    background-color: hsl(213, 96%, 18%);
+    background-color: hsl(243, 100%, 62%);
 }
 .container .select-plan .controls #plan-back{
     padding: 12px;
@@ -407,7 +407,7 @@ h4{
     padding: 12px;
     border: none;
     border-radius: 6px;
-    background-color: hsl(243, 100%, 62%);
+    background-color: hsl(213, 96%, 18%);
     color: white;
     font-size: 18px;
     width: 120px;
@@ -415,7 +415,7 @@ h4{
     margin-top: 30px;
 }
 .container .summary .controls #confirm:hover{
-    background-color: hsl(213, 96%, 18%);
+    background-color: hsl(243, 100%, 62%);
 }
 .container .summary .controls #confirm-back{
     padding: 12px;
