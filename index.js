@@ -146,6 +146,8 @@ document.getElementById('confirm').addEventListener('click', (event) => {
 
 
 const toggleSwitch = document.getElementById('toggle-switch');
+const fees = document.getElementsByClassName('fee');
+const bonuses = document.getElementsByClassName('bonus');
 
 toggleSwitch.addEventListener('change', function() {
   if (this.checked) {
@@ -153,11 +155,31 @@ toggleSwitch.addEventListener('change', function() {
     document.getElementById('monthly').style.color = 'hsl(231, 11%, 63%)';
     document.getElementById('monthly').style.fontWeight = '500';
     document.getElementById('yearly').style.fontWeight = '600';
+
+    
+        fees[0].innerText = '$90/year';
+        fees[1].innerText = '$120/year';
+        fees[2].innerText = '$150/year';
+    
+
+    for(let i = 0; i < bonuses.length; i++) {
+        bonuses[i].innerText = '2 months free';
+    }
+
   } else {
     document.getElementById('monthly').style.color = 'hsl(213, 96%, 18%)';
     document.getElementById('yearly').style.color = 'hsl(231, 11%, 63%)';
     document.getElementById('monthly').style.fontWeight = '600';
     document.getElementById('yearly').style.fontWeight = '500';
+
+        fees[0].innerText = '$9/mo';
+        fees[1].innerText = '$12/mo';
+        fees[2].innerText = '$15/mo';
+    
+
+   for(let i = 0; i < bonuses.length; i++) {
+        bonuses[i].innerText = '';
+   }
   }
 });
 

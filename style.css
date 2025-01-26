@@ -165,6 +165,10 @@ h4{
 .container .select-plan .cards .card span p{
     color: hsl(0, 0%, 33%);
 }
+.container .select-plan .cards .card span .bonus{
+    color: hsl(213, 96%, 18%);
+    font-size: 14px;
+}
 .container .select-plan .toggle{
     width: 100%;
     display: flex;
