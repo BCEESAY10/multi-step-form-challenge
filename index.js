@@ -76,6 +76,7 @@ function validateForm() {
     
 }
 
+//Select plan section
 function selectPlan() {
     personalInfoStep.style.display = 'none';
     one.classList.remove('active');
@@ -83,6 +84,7 @@ function selectPlan() {
     planStep.style.display = 'block';
 }
 
+//Add-ons section
 function addOns() {
     planStep.style.display = 'none';
     two.classList.remove('active');
@@ -90,6 +92,7 @@ function addOns() {
     document.getElementById('add-on').style.display = 'block';
 }
 
+//Summary section
 function summary() {
     document.getElementById('add-on').style.display = 'none';
     three.classList.remove('active');
@@ -97,7 +100,7 @@ function summary() {
     document.getElementById('summary').style.display = 'block';
 }
 
-
+//Return from plan section to personal info section when back button is clicked
 document.getElementById('plan-back').addEventListener('click', (event) => {
     event.preventDefault();
     personalInfoStep.style.display = 'block';
@@ -106,12 +109,19 @@ document.getElementById('plan-back').addEventListener('click', (event) => {
     planStep.style.display = 'none';
 });
 
-
+//Move from plan section to add-ons section when next button is clicked
+const planError = document.getElementById('plan-error');
 document.getElementById('plan-next').addEventListener('click', (event) => {
     event.preventDefault();
-    addOns();
+    if (cardSelected) {
+        planError.innerText = '';
+        addOns();
+    } else {
+        planError.innerText = 'Please select a plan before proceeding.';
+    }
 });
 
+//Return from add-ons section to plan section when back button is clicked
 document.getElementById('add-back').addEventListener('click', (event) => {
     event.preventDefault();
     planStep.style.display = 'block';
@@ -120,11 +130,13 @@ document.getElementById('add-back').addEventListener('click', (event) => {
     document.getElementById('add-on').style.display = 'none';
 });
 
+//Move from add-ons section to summary section when next button is clicked
 document.getElementById('add-next').addEventListener('click', (event) => {
     event.preventDefault();
     summary();
 });
 
+//Return from summary section to add-ons section when back button is clicked
 document.getElementById('confirm-back').addEventListener('click', (event) => {
     event.preventDefault();
     document.getElementById('add-on').style.display = 'block';
@@ -133,6 +145,7 @@ document.getElementById('confirm-back').addEventListener('click', (event) => {
     document.getElementById('summary').style.display = 'none';
 });
 
+//Move from summary section to success section when confirm button is clicked
 document.getElementById('confirm').addEventListener('click', (event) => {
     event.preventDefault();
     document.getElementById('summary').style.display = 'none';
@@ -186,9 +199,12 @@ toggleSwitch.addEventListener('change', function() {
 
 //Click card to be active
 const cards = document.querySelectorAll('.card');
+let cardSelected = false;
+
 cards.forEach(card => {
     card.addEventListener('click', () => {
         cards.forEach(card => card.classList.remove('active'));
         card.classList.add('active');
+        cardSelected = true;
     });
 });
