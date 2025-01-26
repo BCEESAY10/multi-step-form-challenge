@@ -151,8 +151,22 @@ toggleSwitch.addEventListener('change', function() {
   if (this.checked) {
     document.getElementById('yearly').style.color = 'hsl(213, 96%, 18%)';
     document.getElementById('monthly').style.color = 'hsl(231, 11%, 63%)';
+    document.getElementById('monthly').style.fontWeight = '500';
+    document.getElementById('yearly').style.fontWeight = '600';
   } else {
     document.getElementById('monthly').style.color = 'hsl(213, 96%, 18%)';
     document.getElementById('yearly').style.color = 'hsl(231, 11%, 63%)';
+    document.getElementById('monthly').style.fontWeight = '600';
+    document.getElementById('yearly').style.fontWeight = '500';
   }
+});
+
+
+//Click card to be active
+const cards = document.querySelectorAll('.card');
+cards.forEach(card => {
+    card.addEventListener('click', () => {
+        cards.forEach(card => card.classList.remove('active'));
+        card.classList.add('active');
+    });
 });
