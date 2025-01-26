@@ -61,3 +61,53 @@ function selectPlan() {
     two.classList.add('active');
     planStep.style.display = 'block';
 }
+
+function addOns() {
+    planStep.style.display = 'none';
+    two.classList.remove('active');
+    three.classList.add('active');
+    document.getElementById('add-on').style.display = 'block';
+}
+
+function summary() {
+    document.getElementById('add-on').style.display = 'none';
+    three.classList.remove('active');
+    four.classList.add('active');
+    document.getElementById('summary').style.display = 'block';
+}
+
+
+document.getElementById('plan-back').addEventListener('click', (event) => {
+    event.preventDefault();
+    personalInfoStep.style.display = 'block';
+    one.classList.add('active');
+    two.classList.remove('active');
+    planStep.style.display = 'none';
+});
+
+
+document.getElementById('plan-next').addEventListener('click', (event) => {
+    event.preventDefault();
+    addOns();
+});
+
+document.getElementById('add-back').addEventListener('click', (event) => {
+    event.preventDefault();
+    planStep.style.display = 'block';
+    two.classList.add('active');
+    three.classList.remove('active');
+    document.getElementById('add-on').style.display = 'none';
+});
+
+document.getElementById('add-next').addEventListener('click', (event) => {
+    event.preventDefault();
+    summary();
+});
+
+document.getElementById('confirm-back').addEventListener('click', (event) => {
+    event.preventDefault();
+    document.getElementById('add-on').style.display = 'block';
+    three.classList.add('active');
+    four.classList.remove('active');
+    document.getElementById('summary').style.display = 'none';
+});
