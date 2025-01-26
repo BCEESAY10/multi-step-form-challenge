@@ -15,46 +15,65 @@ nextButton.addEventListener('click', (event) => {
     validateForm();
 });
 
+const setError = (element, message) => {
+    const formGroup = element.parentElement;
+    const error = formGroup.querySelector('.error');
+
+    error.innerText = message;
+};
+
+const setSuccess = (element) => {
+    const formGroup = element.parentElement;
+    const error = formGroup.querySelector('.error');
+
+    error.innerText = '';
+};
+
+const isValidEmail = (email) => {
+    const re = /\S+@\S+\.\S+/;
+    return re.test(String(email).toLowerCase());
+};
 
 function validateForm() {
-    let isValid = true;
+    for(let i = 0; i < inputFields.length; i++) {
+        let name = inputFields[i].value.trim();
+        let email = inputFields[i+1].value.trim();
+        let phone = inputFields[i+2].value.trim();
 
-    // Loop through all input fields and validate them
-    for (let i = 0; i < inputFields.length; i++) {
-        const input = inputFields[i];
-        const value = input.value.trim(); 
-
-        // Check if the input is empty
-        if (value === '') {
-            isValid = false; 
-            if (input.type === 'text') {
-                nameError.style.display = 'block';
-               
-            } else if (input.type === 'email') {
-                emailError.style.display = 'block';
-                
-            } else if(input.type === 'tel') {
-                phoneError.style.display = 'block';
-                break;
-            }
-        } 
-        
-        else {
-            // Hide error messages for valid inputs
-            if (input.type === 'text') {
-                nameError.style.display = 'none';
-            } else if (input.type === 'email') {
-                emailError.style.display = 'none';
-            } else if(input.type === 'tel') {
-                phoneError.style.display = 'none';
-            }
+        //Name validation
+        if(name === '') {
+            setError(inputFields[i], 'Name is required');
+            return;
+        } else {
+            setSuccess(inputFields[i]);
         }
-    }
 
-    // If the form is valid, proceed to the next step
-    if (isValid) {
+        //Email validation
+        if(email === '') {
+            setError(inputFields[i+1], 'Email is required');
+            return;
+        } else if(!isValidEmail(email)) {
+            setError(inputFields[i+1], 'Email is not valid');
+            return;
+        }else {
+            setSuccess(inputFields[i+1]);
+        }
+
+        //Phone number validation
+        if(phone === '') {
+            setError(inputFields[i+2], 'Phone is required');
+            return;
+        } else if(phone.length < 7) {
+            setError(inputFields[i+2], 'Phone number cannot be less than 7 digits');
+            return;
+        }else {    
+            setSuccess(inputFields[i+2]);
+        }
+
+        //If all fields are valid, move to the next step
         selectPlan();
     }
+    
 }
 
 function selectPlan() {
