@@ -111,12 +111,14 @@ document.getElementById('plan-back').addEventListener('click', (event) => {
 
 //Move from plan section to add-ons section when next button is clicked
 const planError = document.getElementById('plan-error');
+const planControls = document.getElementById('plan-controls');
 document.getElementById('plan-next').addEventListener('click', (event) => {
     event.preventDefault();
     if (cardSelected) {
         planError.innerText = '';
         addOns();
     } else {
+        planControls.style.marginTop = '-2em';
         planError.innerText = 'Please select a plan before proceeding.';
     }
 });

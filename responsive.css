@@ -359,16 +359,22 @@
         color: hsl(213, 96%, 18%);
     }
     
+    /* ---------------------- */
     /* Summary styles */
+    /* ---------------------- */
+
     .container .summary{
-        margin: 20px;
-        padding: 20px 16px;
+        margin: 0;
+        margin-top: 6em;
+        z-index: 10;
+        background-color: white;
+        border-radius: 6px;
     }
     .container .summary .rects{
         display: grid;
         grid-template-rows: repeat(1fr, 3);
-        margin-top: 50px;
-        width: 500px;
+        margin-top: 30px;
+        width: 100%;
     }
     
     .container .summary .rects .rect{
@@ -437,17 +443,22 @@
         color: hsl(213, 96%, 18%);
     }
     
+    /* ------------------ */
     /* Success */
+     /* ------------------ */
     .success{
-        margin: 20px;
-        padding: 20px 16px;
+        margin: 0;
+        margin-top: 6em;
+        z-index: 10;
+        background-color: white;
+        border-radius: 6px;
     }
     .success .content{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        margin-top: 30%;
+        margin-bottom: 6em;
     }
     .success .content p{
         text-align: center;
