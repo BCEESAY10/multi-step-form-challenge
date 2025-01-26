@@ -441,6 +441,27 @@ h4{
     color: hsl(213, 96%, 18%);
 }
 
+/* Success */
+.success{
+    margin: 20px;
+    padding: 20px 16px;
+}
+.success .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30%;
+}
+.success .content p{
+    text-align: center;
+    color: hsl(231, 11%, 63%);
+}
+.success .content h1{
+    color: hsl(213, 96%, 18%);
+    margin: 20px 0;
+}
+
 /* Footer styles */
 .attribution{
     display: fixed;

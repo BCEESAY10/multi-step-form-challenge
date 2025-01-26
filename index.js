@@ -111,3 +111,9 @@ document.getElementById('confirm-back').addEventListener('click', (event) => {
     four.classList.remove('active');
     document.getElementById('summary').style.display = 'none';
 });
+
+document.getElementById('confirm').addEventListener('click', (event) => {
+    event.preventDefault();
+    document.getElementById('summary').style.display = 'none';
+    document.getElementById('success').style.display = 'block';
+});
