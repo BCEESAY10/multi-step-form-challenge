@@ -138,3 +138,21 @@ document.getElementById('confirm').addEventListener('click', (event) => {
     document.getElementById('summary').style.display = 'none';
     document.getElementById('success').style.display = 'block';
 });
+
+
+//Set Functionalities for the plan section
+//Whhen yearly is selected, the monthly price is replaced with the yearly price
+//When another card is clicked, the active class is removed from the previous card and added to the new card
+
+
+const toggleSwitch = document.getElementById('toggle-switch');
+
+toggleSwitch.addEventListener('change', function() {
+  if (this.checked) {
+    document.getElementById('yearly').style.color = 'hsl(213, 96%, 18%)';
+    document.getElementById('monthly').style.color = 'hsl(231, 11%, 63%)';
+  } else {
+    document.getElementById('monthly').style.color = 'hsl(213, 96%, 18%)';
+    document.getElementById('yearly').style.color = 'hsl(231, 11%, 63%)';
+  }
+});
